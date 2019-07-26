@@ -1,0 +1,26 @@
+<div class="container">
+    <form [formGroup]="posts" (submit)="addPost(posts)">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">title</label>
+        <input
+        formControlName="title"
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput2">description</label>
+        <textarea
+        formControlName="description"
+          class="form-control"
+          id="exampleFormControlInput2"
+          placeholder="description"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+    </form>
+
+</div>
+{{post | json}}

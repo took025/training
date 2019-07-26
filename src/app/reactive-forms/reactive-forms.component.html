@@ -1,0 +1,83 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+    <input formControlName="name" placeholder="Your name">
+  
+    <p>Your choosen name: {{ myForm.get('name').value }}</p>
+    <div *ngIf="myForm.get('name').hasError('required')">
+      Oops, please provide a name!
+    </div>
+  
+    <input formControlName="email" placeholder="Your email">
+    <div *ngIf="myForm.controls.email.hasError('pattern')">
+      Oops, wrong pattern buddy!
+    </div>
+    <p>"tokofxaladze@gmail.com"</p>
+  
+ 
+  
+    <input formControlName="title" placeholder="Your title">
+    <p *ngIf="myForm.controls.title.invalid && myForm.controls.title.pristine">assdd</p>
+    <!-- <span *ngIf="myForm.title.valid" ></span> -->
+  
+    <!-- <div *ngIf="myForm.controls.message.errors.maxLength">
+      Write something longer please!
+    </div> -->
+  
+    <button type="submit" >
+      Send
+    </button>
+    <!-- <button type="submit" [disabled]="myForm.invalid">
+      Send
+    </button> -->
+  </form>
+
+  <!-- <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <label class="label">Name</label>
+    <input class="input"
+           type="text"
+           formControlName="name">
+    <p *ngIf="myForm.get('name').hasError('required')" style=" color:red">Name is <strong>required</strong></p>
+  
+    <label class="label">Email</label>
+    <input class="input"
+           type="text"
+           name="email"
+           formControlName="email">
+    <p *ngIf="myForm.get('email').hasError('required') && email.valid" style=" color:red">email is <strong>required</strong></p>
+  
+           <label class="label">title</label>
+           <input class="input"
+                  type="text"
+                  formControlName="title">
+    <label class="label">Password</label>
+    <input class="input"
+           type="password"
+           formControlName="password">
+  
+    <button type="submit" [disabled]="!myForm.valid">Submit</button>
+  </form> -->
+
+  <!-- <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <label class="label">Name</label>
+    <input class="input"
+           type="text"
+           formControlName="name">
+    <p *ngIf="name.invalid && !name.pristine">Name is required.</p>
+  
+    <label class="label">Email</label>
+    <input class="input"
+           type="text"
+           formControlName="email">
+    <div *ngIf="email.invalid && !email.pristine">
+      <p *ngIf="email.errors.email">Valid email is required.</p>
+    </div>
+  
+    <label class="label">Password</label>
+    <input class="input"
+           type="password"
+           formControlName="password">
+    <div *ngIf="password.invalid && !password.pristine">
+      <p *ngIf="password.errors.minlength">Password should be at least 6 characters.</p>
+    </div>
+  
+    <button type="submit" [disabled]="!reactiveForm.valid">Submit</button>
+  </form> -->
