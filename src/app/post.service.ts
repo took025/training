@@ -12,7 +12,7 @@ export class PostService {
   addPost(post: any): Observable<any> {
     return this.httClient.post('https://jsonplaceholder.typicode.com/posts', {
       title: post.title,
-      boyd: post.description
+      body: post.description
     });
   }
 }

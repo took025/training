@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { PostService } from '../post.service';
 import { Subscription } from 'rxjs';
 
@@ -17,9 +17,10 @@ export class ApicallComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.posts = this.fb.group({
-      title: ['' ],
-      description: ['']
+      title: ['' , Validators.required],
+      description: ['', Validators.required]
     });
+    console.log(this.posts.controls.title.dirty);
   }
   addPost( form: FormGroup) {
     const post = {
@@ -27,6 +28,7 @@ export class ApicallComponent implements OnInit, OnDestroy {
       description: form.value.description
     };
     this.subscription = this.postService.addPost(post).subscribe((res: any) => this.post = res);
+    form.reset();
   }
   ngOnDestroy() {
     // tslint:disable-next-line: no-unused-expression
