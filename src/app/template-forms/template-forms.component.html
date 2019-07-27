@@ -23,6 +23,9 @@
 
   <input type="text" placeholder="Nick name"
          [(ngModel)]="nickName" name="nickName">
+  <div *ngIf="!nickName.valid && nickName.touched">
+    Password is required!
+   </div>
 
   <input type="password" placeholder="Password" required
          [(ngModel)]="password" name="password"
@@ -36,7 +39,8 @@
     Register
   </button>
 
-  <button type="button" (click)="newUserForm.reset()">
+  <button type="button"
+  (click)="newUserForm.reset()">
     Reset
   </button>
 
