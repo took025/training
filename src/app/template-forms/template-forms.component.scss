@@ -1,0 +1,19 @@
+@import "./mixin.scss";
+$def-red: red;
+.tr{
+    height: 10px;
+    background-color: $def-red;
+    @include transform(rotate(-15deg));
+}
+
+@function sum($numbers...) {
+    $sum: 0;
+    @each $number in $numbers {
+      $sum: $sum + $number;
+    }
+    @return $sum;
+  }
+  
+  .micro {
+    width: sum(50px, 30px, 100px);
+  }

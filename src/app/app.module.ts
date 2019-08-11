@@ -9,6 +9,9 @@ import { TemplateFormsComponent } from './template-forms/template-forms.componen
 import { DynamicComponent } from './dynamic/dynamic.component';
 import { ApicallComponent } from './apicall/apicall.component';
 import { HttpClientModule} from '@angular/common/http';
+import { DetailComponent } from './products/detail/detail.component';
+import { HomeComponent } from './products/home/home.component';
+import { StarPmComponent } from './products/home/star-pm/star-pm.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { HttpClientModule} from '@angular/common/http';
     ReactiveFormsComponent,
     TemplateFormsComponent,
     DynamicComponent,
-    ApicallComponent
+    ApicallComponent,
+    HomeComponent,
+    StarPmComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

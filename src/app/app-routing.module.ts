@@ -4,6 +4,8 @@ import { TemplateFormsComponent } from './template-forms/template-forms.componen
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { DynamicComponent } from './dynamic/dynamic.component';
 import { ApicallComponent } from './apicall/apicall.component';
+import { DetailComponent } from './products/detail/detail.component';
+import { HomeComponent } from './products/home/home.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,19 @@ const routes: Routes = [
   {
     path: 'call',
     component: ApicallComponent
+  },
+  {
+    path : 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'detail/:id',
+    component: DetailComponent
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
   }
 ];
 

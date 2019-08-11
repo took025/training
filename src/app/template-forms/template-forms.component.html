@@ -1,5 +1,5 @@
-<pre>{{ newUserForm.form.value | json }}</pre> <!-- Value of whole form -->
-<pre>User name: {{ pickedName.value }}</pre> <!-- Value of userName field -->
+<!-- <pre>{{ newUserForm.form.value | json }}</pre> 
+<pre>User name: {{ pickedName.value }}</pre> 
 <pre>Valid form? {{ newUserForm.form.valid | json }}</pre>
 
 
@@ -8,7 +8,7 @@
 
   <input type="text" placeholder="User name"
          required maxlength="25"
-         [(ngModel)]="userName" name="userName"
+         [(ngModel)]="pickedName" name="nickName"
          #pickedName="ngModel">
   <div *ngIf="!pickedName.valid && pickedName.touched">
     User name is required!
@@ -44,4 +44,8 @@
     Reset
   </button>
 
-</form>
+</form> -->
+
+<div class="tr micro">
+
+</div>
