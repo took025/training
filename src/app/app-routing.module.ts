@@ -9,6 +9,14 @@ import { HomeComponent } from './products/home/home.component';
 
 const routes: Routes = [
   {
+    path: '',
+    loadChildren: () => import('./modules/homie/homie.module').then(mod => mod.HomieModule)
+  },
+  {
+    path: 'author',
+    loadChildren: () => import('./modules/author/author.module').then(mod => mod.AUTHORModule)
+  },
+  {
     path: 'template',
     component: TemplateFormsComponent
   },
@@ -32,11 +40,11 @@ const routes: Routes = [
     path: 'detail/:id',
     component: DetailComponent
   },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  }
+  // {
+  //   path: '',
+  //   redirectTo: 'home',
+  //   pathMatch: 'full'
+  // }
 ];
 
 @NgModule({

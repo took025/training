@@ -12,6 +12,8 @@ import { HttpClientModule} from '@angular/common/http';
 import { DetailComponent } from './products/detail/detail.component';
 import { HomeComponent } from './products/home/home.component';
 import { StarPmComponent } from './products/home/star-pm/star-pm.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { StarPmComponent } from './products/home/star-pm/star-pm.component';
     ApicallComponent,
     HomeComponent,
     StarPmComponent,
-    DetailComponent
+    DetailComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

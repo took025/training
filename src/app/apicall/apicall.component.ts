@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { PostService } from '../post.service';
+import { PostService } from '../services/post.service';
 import { Subscription } from 'rxjs';
 
 @Component({

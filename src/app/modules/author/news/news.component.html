@@ -1,0 +1,7 @@
+<ng-container *ngIf="todos">
+    <ul class="list-group m-5" *ngFor="let todo of todos">
+        <li class="list-group-item">{{todo.title}}</li>
+        <li class="list-group-item">{{todo.body}}</li>
+        <a class="list-group-item"  [routerLink]="['/author/detail/', todo.userId ]" >ავტორის დეტალური ინფო</a>
+    </ul>
+</ng-container>
