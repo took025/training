@@ -9,7 +9,7 @@ import { HomeComponent } from './products/home/home.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'homie',
     loadChildren: () => import('./modules/homie/homie.module').then(mod => mod.HomieModule)
   },
   {
@@ -40,11 +40,11 @@ const routes: Routes = [
     path: 'detail/:id',
     component: DetailComponent
   },
-  // {
-  //   path: '',
-  //   redirectTo: 'home',
-  //   pathMatch: 'full'
-  // }
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({

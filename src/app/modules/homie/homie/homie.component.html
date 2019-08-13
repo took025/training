@@ -2,8 +2,8 @@
     <ul class="list-group m-5" *ngFor="let todo of todos">
         <li class="list-group-item">{{todo.title}}</li>
         <li class="list-group-item">{{todo.completed}}</li>
-        <a class="list-group-item"  [routerLink]="['author/news/', todo.userId ]" >ავტორის სტატიები</a>
-        <a class="list-group-item"  [routerLink]="['author/detail/', todo.userId ]" >ავტორის დეტალური ინფო</a>
+        <a class="list-group-item"  [routerLink]="['/author/news/', todo.userId ]" >ავტორის სტატიები</a>
+        <a class="list-group-item"  [routerLink]="['/author/detail/', todo.userId ]" >ავტორის დეტალური ინფო</a>
         <!-- <li class="list-group-item">Morbi leo risus</li> -->
         <!-- <li class="list-group-item">Porta ac consectetur ac</li> -->
         <!-- <li class="list-group-item">Vestibulum at eros</li> -->

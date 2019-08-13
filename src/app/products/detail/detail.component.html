@@ -5,23 +5,23 @@
     </div>
     <ul class="u" >
       <li class="card-header">
-        {{ product.productName}}
+        productName: {{ product.productName}}
       </li>
       <li class="card-header">
-        {{ product.productCode  }}
+        productCode: {{ product.productCode  }}
       </li>
       <li class="card-header">
-        {{ product.releasedate  }}
+        releasedate: {{ product.releasedate  }}
       </li>
       <li class="card-header">
-        {{ product.price | currency: 'USD': symbol: '1.2-2'  }}
+        price: {{ product.price | currency: 'USD': symbol: '1.2-2'  }}
       </li>
-      <li class="card-header">
-        <app-star-pm [rating]="product.StarRating" >
+      <li class="card-header d-flex">
+        starRating:<app-star-pm [rating]="product.StarRating" >
         </app-star-pm>
       </li>
       <li class="card-header">
-        {{ product.about  }}
+        about: {{ product.about  }}
       </li>
         <button (click)="onBack()" type="button" class="btn btn-outline-secondary p-1 mt-2 ml-4">ptoducts <i class="fas fa-arrow-left"></i></button>
     </ul>

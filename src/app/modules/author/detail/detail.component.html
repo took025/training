@@ -5,14 +5,7 @@
         <li class="list-group-item">{{todos.phone}}</li>
         <li class="list-group-item">{{todos.username}}</li>
         <li class="list-group-item">{{todos.website}}</li>
-        <!-- <a class="list-group-item"  [routerLink]="['author/news/', todos.userId ]" >ავტორის სტატიები</a> -->
+        <li class="list-group-item">address: {{todos.address.street}},city: {{todos.address.city}}, zipcode: {{todos.address.zipcode}}</li>
+        <li class="list-group-item">company name: {{todos.company.name}},catchPhrase: {{todos.company.catchPhrase}}, bs:{{todos.company.bs}}</li>
     </ul>
 </ng-container>
-<!-- address: {street: "Kulas Light", suite: "Apt. 556", city: "Gwenborough", zipcode: "92998-3874", geo: {…}}
-company: {name: "Romaguera-Crona", catchPhrase: "Multi-layered client-server neural-net", bs: "harness real-time e-markets"}
-email: "Sincere@april.biz"
-id: 1
-name: "Leanne Graham"
-phone: "1-770-736-8031 x56442"
-username: "Bret"
-website: "hildegard.org" -->
