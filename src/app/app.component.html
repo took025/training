@@ -1,5 +1,57 @@
-<app-header></app-header>
-<app-footer></app-footer>
+<!-- <app-header></app-header> -->
+<!-- <app-footer></app-footer> -->
 
 
 <router-outlet></router-outlet>
+<!-- <ngx-daterangepicker-material (choosedDate)="choosedDate($event)">
+</ngx-daterangepicker-material>
+<input type="text" ngxDaterangepickerMd startKey="start" endKey="end" [ranges]="ranges" [(ngModel)]="model"> -->
+
+<!-- <input type="text" ngxDaterangepickerMd [(ngModel)]="selected" class="form-control"/> -->
+
+<!-- <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" /> -->
+<!-- <div class="form-group">
+        <h3>Datepicker</h3>
+        <div class="input-group" daterangepicker [options]="singlePicker" (selected)="singleSelect($event)">
+          <span class="form-control uneditable-input"  name="daterange" >
+            {{ singleDate | date:'M/dd/y' }}
+          </span>
+          <span class="input-group-btn">
+            <a type="button" class="btn btn-default">
+              <i class="glyphicon glyphicon-calendar"></i>
+            </a>
+          </span>
+        </div>
+      </div> -->
+      
+      <div class="form-group">
+        <h3>Range - Datepicker</h3>
+        <div class="input-group" daterangepicker 
+         
+        (selected)="selectedDate($event)">
+          <span class="form-control uneditable-input"  name="daterange">
+            {{ mainInput.start | date:'M/dd/y' }} - {{ mainInput.end| date:'M/dd/y' }}
+          </span>
+          <!-- <span class="input-group-btn">
+            <a type="button" class="btn btn-default" style="width: 20px; background-color:red; height: 30px">
+              <i class="glyphicon glyphicon-calendar"></i>
+            </a>
+          </span> -->
+        </div>
+      </div>
+      {{ mainInput.start}}
+
+      <!-- <input type="daterange" ng-model="dates4" ranges="ranges"> {{dates4|json}}
+       <input type="date"> -->
+
+       <!-- <input type="text" matInput
+    ngxDaterangepickerMd
+    [locale]="{applyLabel: 'ok', format: 'DD-MM-YYYY'}"
+    startKey="start"
+    endKey="end"
+    [(ngModel)]="selected"
+    name="daterange"
+    [ranges]="ranges" />
+
+    <input type="text" ngxDaterangepickerMd startKey="start" endKey="end"[(ngModel)]="model"> -->
+

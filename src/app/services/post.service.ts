@@ -7,6 +7,7 @@ import { Observable } from 'rxjs/internal/Observable';
   providedIn: 'root'
 })
 export class PostService {
+  touch: boolean;
 
   constructor( private httClient: HttpClient) { }
   addPost(post: any): Observable<any> {
@@ -14,5 +15,8 @@ export class PostService {
       title: post.title,
       body: post.description
     });
+  }
+  toogle() {
+    this.touch = !this.touch;
   }
 }

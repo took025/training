@@ -1,0 +1,197 @@
+<!-- <div class="container">
+    <div class="sliders">
+      <ng-container *ngFor="let img of img_list; let i = index">
+        <div class="slider" *ngIf="current == i" @fade>
+          <img class="img" [src]="img">
+        </div>
+      </ng-container>
+    </div>
+  </div> -->
+<!-- <div style="display: flex;">
+  <div
+    style="flex-basis: 47%; display :flex;"
+  >
+    <app-car
+      style="width: 100%"
+      [autoPlayDuration]="2000000"
+      animation="slide"
+      [isNavigationVisible]="true"
+      [isThumbnailsVisible]="true"
+      [slides]="slides"
+      [slideTemplateRef]="slide"
+      [thumbnailTemplateRef]="thumbnail"
+      [showslidebottom]="true"
+    ></app-car>
+    <ng-template #slide let-slide>
+      <div
+        [ngStyle]="{
+          'background-size': 'cover',
+          'background-image': 'url(' + slide.url + ')',
+          'background-repeat': 'no-repeat',
+          width: '100%',
+          height: '100%'
+        }"
+      ></div>
+    </ng-template>
+    <ng-template #thumbnail let-slide>
+      <div
+        [ngStyle]="{
+          'background-size': 'cover',
+          'background-image': 'url(' + slide.url + ')',
+          'background-repeat': 'no-repeat',
+          'background-position': 'center center',
+          width: '40px',
+          height: '40px'
+        }"
+      ></div>
+    </ng-template>
+  </div>
+
+  <div style="flex-basis: 54%; display:flex;"></div>
+</div> -->
+
+<!-- <carousel-component >
+        <div class="item-carousel">a</div>
+        <div class="item-carousel">
+            <div class="b">
+                <img src="https://www.losminionsaldia.com/images/mas-minions/minion.png" />
+            </div>
+        </div>
+        <div class="item-carousel">c</div>
+        <div class="item-carousel">d</div>
+    </carousel-component> -->
+
+<!-- <div class="container-fluid d-none">
+  <div class="row" style="padding: 20px;">
+    <div class="col-sm-12 btn btn-success">
+      Use Bootstrap carousel in Angular 8 Project
+    </div>
+  </div>
+  <div class="col-12">
+    <ngb-carousel>
+      <ng-container *ngFor="let slide of slides  ">
+        <ng-template ngbSlide>
+          <img [src]="slide.url" alt="Delhi Metro" />
+          <div class="carousel-caption">
+            <h3 style="color: yellow">Delhi Metro</h3>
+          </div>
+        </ng-template>
+      </ng-container>
+                    <img src="https://www.whatsappprofiledpimages.com/wp-content/uploads/2019/01/d3kqway-c2442b67-aa9f-4840--300x266.jpg" alt="Bangalore Metro">  
+                    <div class="carousel-caption">  
+                        <h3 style="color: yellow">Bangalore Metro</h3>  
+                    </div>  
+                </ng-template>  
+                <ng-template ngbSlide>  
+                    <img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/10D88/production/_103600096_mediaitem103600095.jpg" alt="Channai Metro">  
+                    <div class="carousel-caption">  
+                        <h3 style="color: yellow">Channai Metro</h3>  
+                    </div>  
+                </ng-template>  
+                <ng-template ngbSlide>  
+                    <img src="https://www.whatsappprofiledpimages.com/wp-content/uploads/2019/01/d3kqway-c2442b67-aa9f-4840--300x266.jpg" alt="Jaipur Metro">  
+                    <div class="carousel-caption">  
+                        <h3 style="color: yellow">Jaipur Metro</h3>  
+                    </div>  
+                </ng-template>  
+                <ng-template ngbSlide>  
+                    <img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/10D88/production/_103600096_mediaitem103600095.jpg" alt="Mumbai Metro">  
+                    <div class="carousel-caption">  
+                        <h3 style="color: yellow">Mumbai Metro</h3>  
+                    </div>  
+                </ng-template>   
+    </ngb-carousel>
+  </div>
+</div> -->
+
+<div class="popular-services  ml-n1">
+  <h1 class="popular-title mb-4  firagob">Popular services</h1>
+  <div class="popular-blocks d-flex">
+    <div
+      *ngFor="let slide of slides" (click)="activateClass(slide)" [ngClass]="{'active': slide.active}"
+      class="block m-2  d-flex align-items-center justify-content-center"
+    >
+      <img class="mr-3" [src]="slide.url" />
+      <div class="texts d-flex flex-column">
+        <span class="firagob">{{ slide.text }}</span>
+        <span class="foragor">{{ slide.text }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<button (click)="onPreviousSearchPosition()">Click to prev</button>
+<button (click)="onNextSearchPosition()">Click to next</button>
+<!-- 
+      <ngb-carousel *ngIf="slides">
+          <ng-template ngbSlide *ngFor="let slide of slides">
+            <img [src]="slide.url" alt="Random first slide">
+            <div class="carousel-caption">
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <img [src]="images[1]" alt="Random second slide">
+            <div class="carousel-caption">
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <img [src]="images[2]" alt="Random third slide">
+            <div class="carousel-caption">
+              <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+          </ng-template>
+        </ngb-carousel> -->
+
+        <!-- <button (click)="moveLeft(current)">Left</button>
+        <button (click)="moveRight(current)">Right</button><br>
+<drag-scroll #nav>
+  <div  *ngFor="let item of slides; let even = even;let odd = odd;">
+    <img   [ngClass]="{ 'k-alt': odd}" [src]="item.url" />
+    <span>{{item.text}}</span>
+  </div>
+</drag-scroll> -->
+<!-- 
+<span *ngFor="let item of (Array1 | async)">
+  <li *ngFor="let item of items">
+
+  </li>
+</span> -->
+
+<!-- <p>
+  If `true` - carousel indicators indicate slides chunks works ONLY if singleSlideOffset = FALSE
+</p>
+<carousel [itemsPerSlide]="itemsPerSlide"
+          [singleSlideOffset]="false"
+          [interval]="false"
+          [indicatorsByChunk]="true">
+  <slide *ngFor="let slide of slides; let index=index">
+    <img [src]="slide.url" alt="image slide" style="display: block; width: 100%;">
+    <div class="carousel-caption">
+      <h4>Slide {{index}}</h4>
+    </div>
+  </slide>
+</carousel> -->
+
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+</div>

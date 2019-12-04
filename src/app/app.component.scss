@@ -1,0 +1,12 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.form-group {
+  width: 350px;
+  margin-left: 50px;
+}
+::ng-deep.daterangepicker .ranges li:hover {
+    background-color: black;
+}
+::ng-deep.daterangepicker.ltr .ranges {
+  float: right !important;
+}

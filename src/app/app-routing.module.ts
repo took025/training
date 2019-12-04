@@ -6,6 +6,7 @@ import { DynamicComponent } from './dynamic/dynamic.component';
 import { ApicallComponent } from './apicall/apicall.component';
 import { DetailComponent } from './products/detail/detail.component';
 import { HomeComponent } from './products/home/home.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'call',
     component: ApicallComponent
+  },
+  {
+    path: 'carousel',
+    component: CarouselComponent
   },
   {
     path : 'home',
